@@ -1,0 +1,174 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+
+\usepackage{graphicx,url}
+
+\usepackage[brazil]{babel}   
+\usepackage[latin1]{inputenc} 
+
+
+\sloppy
+
+\title{Padrões e AntiPadrões J2EE\\ Trabalho de Conclusão da Disciplina}
+
+\author{Thuan S. Nabuco\inst{1}}
+
+
+\address{Pós-Graduação em Engenharia de Software com Ênfase em Padrões de Projeto\\ 
+Universidade Estadual do Ceará (UECE)\\
+Caixa Postal 15.064 -- 91.501-970 -- Fortaleza -- CE -- Brasil
+\email{thuan@ifce.edu.br}
+}
+
+\begin{document} 
+
+\maketitle
+
+\begin{resumo} 
+Este artigo consiste em uma abordagem descritiva de seis padrões a serem utilizados para desenvolvimento na plataforma Java Enterprise Edition em relação ao desenvolvimento de uma aplicação hipotética durante a pesquisa para disciplina de Padrões e AntiPadrões J2EE da Universidade Estadual do Ceará.
+\end{resumo}
+
+
+\section{Presentation Tier - Intercepting Filter} % (fold)
+\label{sec:presentation_tier_intercepting_filter}
+\subsection{Cenário} % (fold)
+\label{sub:cenario}
+
+% subsection cenário (end)
+Em um sistema web JEE referente a uma rede de hotéis, há vários hotéis que utilizarão o mesmo sistema para cadastro de clientes, reservas e etc. Um determinado usuário ao acessar o sistema web é identificado por um perfil, seja ele usuário administrador ou usuário cliente, esse perfil consiste em uma associação das suas respectivas permissões de usuário à um determinado hotel que pertece a rede de hotéis. 
+
+\subsection{Problema} % (fold)
+\label{sub:problema}
+
+% subsection problema (end)
+Ao efetuar a autenticação do usuário no sistema web devemos identificar dentro do seu perfil quais são as suas permissões e quais hoteis terá acesso para o redirecionamento adequado para página do hotel.
+\subsection{Justificativa} % (fold)
+\label{sub:justificativa}
+
+% subsection justificativa (end)
+O padrão intercepting Filter foi necessário para identificar através da requisição o hotel presente na sessão do usuário realizarmos a busca e armazenamento na sessão de um determinado hotel a partir da requisição a busca de um determinado hotel.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.9\textwidth]{intercepting.jpg}
+\caption{Intercepting Filter - Source Code}
+\label{fig:exampleFig1}
+\end{figure}
+
+% section presentation_tier_intercepting_filter (end)
+\section{Presentation Tier - Composite View} % (fold)
+\label{sec:presentation_tier_composite_view}
+
+\subsubsection{Cenário} % (fold)
+\label{sub:cenario}
+
+Em um sistema web JEE referente a uma rede de hotéis, o usuário poderá navegar pela aplicação utilizando uma barra de navegação. Essa barra será diferente para cada perfil de usuário, caso ele seja um usuário administrador poderá navegar por páginas administrativas, caso ele seja um usuário cliente, poderá realizar reservas, visualizar os quartos disponíveis, alterar seus dados e todas as opções referentes a pagamento. 
+% subsubsection cenário (end)
+\subsection{Problema} % (fold)
+\label{sub:problema}
+
+Todas as páginas do sistema seguirão um layout predefinido, barra de navegação(navbar), barra final (footer) e o corpo da página (body). Como há diferenças em cada perfil de usuário
+% subsection problema (end)
+
+\subsection{Justificativa} % (fold)
+\label{sub:justificativa}
+
+% subsection justificativa (end)
+% section presentation_tier_composite_view (end)
+
+
+\section{Business Tier - Session Facade}
+
+Section titles must be in boldface, 13pt, flush left. There should be an extra
+12 pt of space before each title. Section numbering is optional. The first
+paragraph of each section should not be indented, while the first lines of
+subsequent paragraphs should be indented by 1.27 cm.
+
+\section{Business Tier - Application Service}
+
+Section titles must be in boldface, 13pt, flush left. There should be an extra
+12 pt of space before each title. Section numbering is optional. The first
+paragraph of each section should not be indented, while the first lines of
+subsequent paragraphs should be indented by 1.27 cm
+
+\section{Integration Tier - Data Access Object} 
+
+Section titles must be in boldface, 13pt, flush left. There should be an extra
+12 pt of space before each title. Section numbering is optional. The first
+paragraph of each section should not be indented, while the first lines of
+subsequent paragraphs should be indented by 1.27 cm.
+
+\section{Integration Tier - Domain Store} 
+
+Section titles must be in boldface, 13pt, flush left. There should be an extra
+12 pt of space before each title. Section numbering is optional. The first
+paragraph of each section should not be indented, while the first lines of
+subsequent paragraphs should be indented by 1.27 cm.
+
+\subsection{Subsections}
+
+The subsection titles must be in boldface, 12pt, flush left.
+
+\section{Figures and Captions}\label{sec:figs}
+
+
+Figure and table captions should be centered if less than one line
+(Figure~\ref{fig:exampleFig1}), otherwise justified and indented by 0.8cm on
+both margins, as shown in Figure~\ref{fig:exampleFig2}. The caption font must
+be Helvetica, 10 point, boldface, with 6 points of space before and after each
+caption.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.5\textwidth]{fig1.jpg}
+\caption{A typical figure}
+\label{fig:exampleFig1}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.3\textwidth]{fig2.jpg}
+\caption{This figure is an example of a figure caption taking more than one
+line and justified considering margins mentioned in Section~\ref{sec:figs}.}
+\label{fig:exampleFig2}
+\end{figure}
+
+In tables, try to avoid the use of colored or shaded backgrounds, and avoid
+thick, doubled, or unnecessary framing lines. When reporting empirical data,
+do not use more decimal digits than warranted by their precision and
+reproducibility. Table caption must be placed before the table (see Table 1)
+and the font used must also be Helvetica, 10 point, boldface, with 6 points of
+space before and after each caption.
+
+\begin{table}[ht]
+\centering
+\caption{Variables to be considered on the evaluation of interaction
+techniques}
+\label{tab:exTable1}
+\includegraphics[width=.7\textwidth]{table.jpg}
+\end{table}
+
+\section{Images}
+
+All images and illustrations should be in black-and-white, or gray tones,
+excepting for the papers that will be electronically available (on CD-ROMs,
+internet, etc.). The image resolution on paper should be about 600 dpi for
+black-and-white images, and 150-300 dpi for grayscale images.  Do not include
+images with excessive resolution, as they may take hours to print, without any
+visible difference in the result. 
+
+\section{References}
+
+Bibliographic references must be unambiguous and uniform.  We recommend giving
+the author names references in brackets, e.g. \cite{knuth:84},
+\cite{boulic:91}, and \cite{smith:99}.
+
+The references must be listed using 12 point font size, with 6 points of space
+before each reference. The first line of each reference should not be
+indented, while the subsequent should be indented by 0.5 cm.
+
+\bibliographystyle{sbc}
+\bibliography{sbc-template}
+
+\end{document}
