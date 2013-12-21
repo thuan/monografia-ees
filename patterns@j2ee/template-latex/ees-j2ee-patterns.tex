@@ -12,13 +12,12 @@
 
 \title{Padrões e AntiPadrões J2EE\\ Trabalho de Conclusão da Disciplina}
 
-\author{Thuan S. Nabuco\inst{1}}
+\author{Thuan S. Nabuco\inst{1}, João Vianey\inst{2} }
 
 
 \address{Pós-Graduação em Engenharia de Software com Ênfase em Padrões de Projeto\\ 
-Universidade Estadual do Ceará (UECE)\\
-Caixa Postal 15.064 -- 91.501-970 -- Fortaleza -- CE -- Brasil
-\email{thuan@ifce.edu.br}
+Universidade Estadual do Ceará (UECE)\\ Fortaleza -- CE -- Brasil
+\email{thuan@ifce.edu.br, joaovianey@gmail.com}
 }
 
 \begin{document} 
@@ -26,7 +25,7 @@ Caixa Postal 15.064 -- 91.501-970 -- Fortaleza -- CE -- Brasil
 \maketitle
 
 \begin{resumo} 
-Este artigo consiste em uma abordagem descritiva de seis padrões a serem utilizados para desenvolvimento na plataforma Java Enterprise Edition em relação ao desenvolvimento de uma aplicação hipotética durante a pesquisa para disciplina de Padrões e AntiPadrões J2EE da Universidade Estadual do Ceará.
+Este artigo consiste em uma pesquisa para disciplina de Padrões e AntiPadrões J2EE da Universidade Estadual do Ceará. Foi realizada uma análise sobre a perspectiva de seis padrões J2EE (Intercepting Filter, Composite View, Session Facade, Application Service, Data Access Object e Domain Store) que foram implementados durante o processo de desenvolvimento em duas diferentes aplicações corporativas (ReservaOnline e Palpiteiro).
 \end{resumo}
 
 
@@ -35,140 +34,223 @@ Este artigo consiste em uma abordagem descritiva de seis padrões a serem utiliza
 \subsection{Cenário} % (fold)
 \label{sub:cenario}
 
-% subsection cenário (end)
 Em um sistema web JEE referente a uma rede de hotéis, há vários hotéis que utilizarão o mesmo sistema para cadastro de clientes, reservas e etc. Um determinado usuário ao acessar o sistema web é identificado por um perfil, seja ele usuário administrador ou usuário cliente, esse perfil consiste em uma associação das suas respectivas permissões de usuário à um determinado hotel que pertece a rede de hotéis. 
+% subsection cenário (end)\
 
 \subsection{Problema} % (fold)
 \label{sub:problema}
-
-% subsection problema (end)
 Ao efetuar a autenticação do usuário no sistema web devemos identificar dentro do seu perfil quais são as suas permissões e quais hoteis terá acesso para o redirecionamento adequado para página do hotel.
+% subsection problema (end)
+
 \subsection{Justificativa} % (fold)
 \label{sub:justificativa}
-
-% subsection justificativa (end)
 O padrão intercepting Filter foi necessário para identificar através da requisição o hotel presente na sessão do usuário realizarmos a busca e armazenamento na sessão de um determinado hotel a partir da requisição a busca de um determinado hotel.
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=.9\textwidth]{intercepting.jpg}
-\caption{Intercepting Filter - Source Code}
-\label{fig:exampleFig1}
-\end{figure}
+% subsection justificativa (end)
 
 % section presentation_tier_intercepting_filter (end)
+
 \section{Presentation Tier - Composite View} % (fold)
 \label{sec:presentation_tier_composite_view}
 
-\subsubsection{Cenário} % (fold)
+\subsection{Cenário} % (fold)
 \label{sub:cenario}
-
 Em um sistema web JEE referente a uma rede de hotéis, o usuário poderá navegar pela aplicação utilizando uma barra de navegação. Essa barra será diferente para cada perfil de usuário, caso ele seja um usuário administrador poderá navegar por páginas administrativas, caso ele seja um usuário cliente, poderá realizar reservas, visualizar os quartos disponíveis, alterar seus dados e todas as opções referentes a pagamento. 
 % subsubsection cenário (end)
+
 \subsection{Problema} % (fold)
 \label{sub:problema}
-
-Todas as páginas do sistema seguirão um layout predefinido, barra de navegação(navbar), barra final (footer) e o corpo da página (body). Como há diferenças em cada perfil de usuário
+Todas as páginas do sistema seguirão um layout predefinido, mas há diferenças em cada perfil de usuário haverá algumas modificações em cada página específica para cada perfil. As alterações são distintas e torna-se praticamente inviável modificar página por página.
 % subsection problema (end)
 
 \subsection{Justificativa} % (fold)
 \label{sub:justificativa}
-
+Para viabilizar a manutenibilidade e a escalabilidade da aplicação J2EE o padrão Composite View irá ser aplicado primeiramente nas diferenças entre perfis, aplicando uma estrutura para cada perfil, seja ela uma pagina de clientes ou pagina de administradores, logo após a separação pelo perfil o padrão irá atuar na fragmentação de cada página em áreas como por exemplo, cabeçalho(header) ,barra de navegação(navbar), corpo da página(body) e rodapé(footer). 
 % subsection justificativa (end)
 % section presentation_tier_composite_view (end)
 
+\section{Business Tier - Session Facade} % (fold)
+\label{sec:business_tier_session_facade}
 
-\section{Business Tier - Session Facade}
+\subsection{Cenário} % (fold)
+\label{sub:cenario}
+Sistema J2EE que tem como objetivo gerenciar palpites de jogos de futebol. Para este exemplo será dado ênfase ao procedimento de cadastrar um novo usuário no sistema.
+% subsection cenário (end)
+\subsection{Problema} % (fold)
+\label{sub:problema}
+Como um palpite pode ser realizado de diversas fontes (smartphones, computadores e tablets) existe o risco de parte da lógica de negócio ficar espalhado nas soluções que ficam no lado do cliente. Essa situação contribui para um alto acoplamento dos componentes dificultando a manutenção do sistema.
+% subsection problema (end)
+\subsection{Justificativa} % (fold)
+\label{sub:justificativa}
+Neste caso o padrão Session Facade irá criar uma camada a fim de centralizar e simplificar as requisições para as regras de negócio do servidor. Com isso o cliente não precisará ter conhecimento dos métodos e objetos específicos de negócio do sistema. 
+A fim de facilitar utilização deste padrão, é sugerido a adoção também os padrões Transfer Object(TO) e Application Service.
+% subsection justificativa (end)
+% section business_tier_session_facade (end)
 
-Section titles must be in boldface, 13pt, flush left. There should be an extra
-12 pt of space before each title. Section numbering is optional. The first
-paragraph of each section should not be indented, while the first lines of
-subsequent paragraphs should be indented by 1.27 cm.
+\section{Business Tier - Application Service} % (fold)
+\label{sec:business_tier_application_service}
 
-\section{Business Tier - Application Service}
+\subsection{Cenário} % (fold)
+\label{sub:cenario}
+Sistema J2EE que tem como objetivo gerenciar palpites de jogos de futebol. Para este exemplo será dado ênfase ao procedimento de cadastrar um novo usuário no sistema.
+% subsection cenário (end)
+\subsection{Problema} % (fold)
+\label{sub:problema}
+No sistema é necessário criar componentes que representem as informações de negócio. Por exemplo, para manipular as informações do usuário pode ser adotado o padrão Business Object (BO). 
+Contudo utilizando-se deste padrão para centralizar todas as regras de manipulação desta informação, acaba-se criando um componente muito grande que irá possuir um alto acoplamento entre as regras de negócio e a informação em questão. Isso dificulta bastante a reutilização e manutenção do código.
+% subsection problema (end)
+\subsection{Justificativa} % (fold)
+\label{sub:justificativa}
+Com a utilização do padrão Application Service cria-se uma separação entre as informações de negócio e a manipulação destes. Os objetos BO ficam especializados na representação da informação enquanto que o Application Service enfoca na manipulação destes objectos segundo as regras de negócio do sistema. Essa organização facilita a manutenção e o reaproveitado do código por outros Applications Services.
+Para um melhor uso deste padrão, é recomendado utilizar também dos padrões Transfer Object, Session Facade e Business Object.
+% subsection justificativa (end)
 
-Section titles must be in boldface, 13pt, flush left. There should be an extra
-12 pt of space before each title. Section numbering is optional. The first
-paragraph of each section should not be indented, while the first lines of
-subsequent paragraphs should be indented by 1.27 cm
+% section business_tier_application_service (end)
 
-\section{Integration Tier - Data Access Object} 
+\section{Integration Tier - Data Access Object} % (fold)
+\label{sec:integration_tier_data_access_object}
 
-Section titles must be in boldface, 13pt, flush left. There should be an extra
-12 pt of space before each title. Section numbering is optional. The first
-paragraph of each section should not be indented, while the first lines of
-subsequent paragraphs should be indented by 1.27 cm.
+\subsection{Cenário} % (fold)
+\label{sub:cenario}
+O sistema de reservas precisa armazenar as informações referentes aos seus clientes e aos seus serviços. Para isso, o modelo objeto relacional irá atrelar cada representação de Objeto(Entidade) específico como uma tabela no banco de dados. Um cliente será representado por uma entidade que possui atributos como nome, idade e endereço que precisam consequentemente ser (persistidas) armazenadas em um banco de dados.
+% subsection cenário (end)
 
-\section{Integration Tier - Domain Store} 
+\subsection{Problema} % (fold)
+\label{sub:problema}
+Um sistema referente a uma uma rede de hotéis possui uma grande diversidade de hoteis e consequentemente de clientes e serviços. Dentro dessa diversidade as operações de persistência, atualização, leitura e exclusão serão aplicadas a várias entidades referentes a diferentes hotéis do sistema. 
+% subsection problema (end)
 
-Section titles must be in boldface, 13pt, flush left. There should be an extra
-12 pt of space before each title. Section numbering is optional. The first
-paragraph of each section should not be indented, while the first lines of
-subsequent paragraphs should be indented by 1.27 cm.
+\subsection{Justificativa} % (fold)
+\label{sub:justificativa}
+O padrão Data Access Object além de atuar como uma abstração para prover a reutilização das operações básicas em um banco de dados relacional, também conhecida como CRUD(Create,Read,Update,Delete), irá atuar na especialização das operações de cada entidade relacionada. Dentro do nosso escopo podemos exemplificar um DAOGenerico que irá usar uma Entidade específica e realizar as operações definidas na interface genérica.
+% subsection justificativa (end)
+% section integration_tier_data_access_object (end)
 
-\subsection{Subsections}
+\section{Integration Tier - Domain Store} % (fold)
+\label{sec:integration_tier_domain_store}
 
-The subsection titles must be in boldface, 12pt, flush left.
+\subsection{Cenário} % (fold)
+\label{sub:cenario}
+Sistema J2EE que tem como objetivo gerenciar palpites de jogos de futebol. Para este exemplo será dado ênfase ao procedimento de cadastrar um novo usuário no sistema
+% subsection cenário (end)
+\subsection{Problema} % (fold)
+\label{sub:problema}
+Para salvar as informações do usuário, o sistema possui um gerenciador de banco de dados. Por conta disso o Business Object possui dentro dele informações de como realizar esta persistência. Por exemplo, ele terá informações como: qual gerenciador de banco de dados adotado, como se conectar a este gerenciador e comandos específicos para manipular os dados neste gerenciador. Desta forma o Business Object além de ficar com mais responsabilidade, ele fica muito acoplado a forma de persistência dificultando a manutenção do sistema.
+% subsection problema (end)
+\subsection{Justificativa} % (fold)
+\label{sub:justificativa}
+O padrão Domain Store é utilizado neste caso para separar as responsabilidades envolvidas: representação dos dados para o sistema e procedimentos de como persistir estes dados no banco de dados adotado. Com essa divisão tem-se um maior desacoplamento entre os componentes facilitando o reúso e manutenção do código. Por exemplo, para alterar o gerenciador de banco de dados adotado não será necessário mudar o Businnes Object associado.
+% subsection justificativa (end)
+% section integration_tier_domain_store (end)
 
-\section{Figures and Captions}\label{sec:figs}
+\section{Diagramas de Classe e Trechos de Código} % (fold)
+\label{sec:diagramas_de_classe}
 
-
-Figure and table captions should be centered if less than one line
-(Figure~\ref{fig:exampleFig1}), otherwise justified and indented by 0.8cm on
-both margins, as shown in Figure~\ref{fig:exampleFig2}. The caption font must
-be Helvetica, 10 point, boldface, with 6 points of space before and after each
-caption.
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=.5\textwidth]{fig1.jpg}
-\caption{A typical figure}
-\label{fig:exampleFig1}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{digramaInterceptingFilter.jpg}
+	\caption{Diagrama - Intercepting Filter}
+	\label{fig:label}
 \end{figure}
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=.3\textwidth]{fig2.jpg}
-\caption{This figure is an example of a figure caption taking more than one
-line and justified considering margins mentioned in Section~\ref{sec:figs}.}
-\label{fig:exampleFig2}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{diagramaCompositeView.jpg}
+	\caption{Diagrama - Composite View}
+	\label{fig:label}
 \end{figure}
 
-In tables, try to avoid the use of colored or shaded backgrounds, and avoid
-thick, doubled, or unnecessary framing lines. When reporting empirical data,
-do not use more decimal digits than warranted by their precision and
-reproducibility. Table caption must be placed before the table (see Table 1)
-and the font used must also be Helvetica, 10 point, boldface, with 6 points of
-space before and after each caption.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{diagramSession.jpg}
+	\caption{Diagrama - Application Service, Session Facade e Domain Store}
+	\label{fig:label}
+\end{figure}
 
-\begin{table}[ht]
-\centering
-\caption{Variables to be considered on the evaluation of interaction
-techniques}
-\label{tab:exTable1}
-\includegraphics[width=.7\textwidth]{table.jpg}
-\end{table}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{diagramaDaoGenerico.jpeg}
+	\caption{Diagrama - DAO}
+	\label{fig:label}
+\end{figure}
+% section diagramas_de_classe (end)
 
-\section{Images}
 
-All images and illustrations should be in black-and-white, or gray tones,
-excepting for the papers that will be electronically available (on CD-ROMs,
-internet, etc.). The image resolution on paper should be about 600 dpi for
-black-and-white images, and 150-300 dpi for grayscale images.  Do not include
-images with excessive resolution, as they may take hours to print, without any
-visible difference in the result. 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{interceptingFilter.jpg}
+	\caption{Code - Intercepting Filter}
+	\label{fig:label}
+\end{figure}
 
-\section{References}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{compositeViewCadastrarClienteFooter.jpg}
+	\caption{Code - Composite View}
+	\label{fig:label}
+\end{figure}
 
-Bibliographic references must be unambiguous and uniform.  We recommend giving
-the author names references in brackets, e.g. \cite{knuth:84},
-\cite{boulic:91}, and \cite{smith:99}.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{compositeViewCadastrarClienteHead.jpg}
+	\caption{Code - Composite View}
+	\label{fig:label}
+\end{figure}
 
-The references must be listed using 12 point font size, with 6 points of space
-before each reference. The first line of each reference should not be
-indented, while the subsequent should be indented by 0.5 cm.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{compositeViewCommonInternal.jpg}
+	\caption{Code - Composite View}
+	\label{fig:label}
+\end{figure}
 
-\bibliographystyle{sbc}
-\bibliography{sbc-template}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{compositeViewFooter.jpg}
+	\caption{Code - Composite View}
+	\label{fig:label}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{compositeViewReservaHeader.jpg}
+	\caption{Code - Composite View}
+	\label{fig:label}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{compositeViewEfetuarReservaFooter.jpg}
+	\caption{Code - Composite View}
+	\label{fig:label}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{sessionFacade.png}
+	\caption{Code - Session Facade}
+	\label{fig:label}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{applicationService.png}
+	\caption{Code - Application Service}
+	\label{fig:label}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{daoGeneric.jpg}
+	\caption{Code - DAO}
+	\label{fig:label}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{domainStore.png}
+	\caption{Code - Domain Store}
+	\label{fig:label}
+\end{figure}
+% section source_code_trechos_de_codigo (end)
 
 \end{document}
