@@ -1,0 +1,87 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.52 }
+
+\bibitem[Blum, Eskandarian e Hoffman 2004]{blum2004challenges}
+\abntrefinfo{Blum, Eskandarian e Hoffman}{BLUM; ESKANDARIAN; HOFFMAN}{2004}
+{BLUM, J.J.; ESKANDARIAN, A.; HOFFMAN, L.J. {Challenges of intervehicle ad hoc
+  networks}.
+\emph{IEEE Transactions on Intelligent Transportation Systems}, v.~5, n.~4, p.
+  347--351, 2004.}
+
+\bibitem[Chen et al. 2007]{chen2007impact}
+\abntrefinfo{Chen et al.}{CHEN et al.}{2007}
+{CHEN, A. et al. {Impact of transmission power on TCP performance in vehicular
+  ad hoc networks}.
+\emph{Proc. of the 4th IEEE/IFIP Wireless On demand Networks and Services},
+  Citeseer, p. 65--71, 2007.}
+
+\bibitem[Dotzer 2006]{dotzer2006privacy}
+\abntrefinfo{Dotzer}{DOTZER}{2006}
+{DOTZER, F. {Privacy issues in vehicular ad hoc networks}.
+\emph{Lecture Notes in Computer Science}, Springer, v.~3856, p. 197--209,
+  2006.}
+
+\bibitem[Golle, Greene e Staddon 2004]{golle2004detecting}
+\abntrefinfo{Golle, Greene e Staddon}{GOLLE; GREENE; STADDON}{2004}
+{GOLLE, P.; GREENE, D.; STADDON, J. {Detecting and correcting malicious data in
+  VANETs}. In:  ACM NEW YORK, NY, USA. \emph{Proceedings of the 1st ACM
+  international workshop on Vehicular Ad Hoc Networks}. [S.l.], 2004. p.
+  29--37.}
+
+\bibitem[Guo e Balon 2006]{guo2006vehicular}
+\abntrefinfo{Guo e Balon}{GUO; BALON}{2006}
+{GUO, J.; BALON, N. \emph{{Vehicular Ad Hoc Networks and Dedicated Short-Range
+  Communication}}. 2006.}
+
+\bibitem[IEEE 2010]{80211p}
+\abntrefinfo{IEEE}{IEEE}{2010}
+{IEEE. \emph{P802.11p (D10.03), IEEE Draft Standard -- Specific requirements --
+  Part 11: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY)
+  specifications - Amendment 7: Wireless Access in Vehicular Environments,
+  March 2010.} March 2010.}
+
+\bibitem[Khorashadi et al. 2007]{khorashadi2007impact}
+\abntrefinfo{Khorashadi et al.}{KHORASHADI et al.}{2007}
+{KHORASHADI, B. et al. {Impact of transmission power on the performance of UDP
+  in vehicular ad hoc networks}. In:  CITESEER. \emph{IEEE International
+  Conference on Communications, ICC}. [S.l.], 2007.}
+
+\bibitem[Li e Wang 2007]{li2007routing}
+\abntrefinfo{Li e Wang}{LI; WANG}{2007}
+{LI, F.; WANG, Y. {Routing in vehicular ad hoc networks: A survey}.
+\emph{IEEE Vehicular Technology Magazine}, v.~2, n.~2, p. 12--22, 2007.}
+
+\bibitem[Moustafa e Zhang 2009]{moustafa2009vehicular}
+\abntrefinfo{Moustafa e Zhang}{MOUSTAFA; ZHANG}{2009}
+{MOUSTAFA, H.; ZHANG, Y. \emph{{Vehicular Networks: Techniques, Standards, and
+  Applications}}. [S.l.]: Auerbach Publications Boston, MA, USA, 2009.}
+
+\bibitem[Nakagami, Tanaka e Kanehisa 1957]{nakagami1957m}
+\abntrefinfo{Nakagami, Tanaka e Kanehisa}{NAKAGAMI; TANAKA; KANEHISA}{1957}
+{NAKAGAMI, M.; TANAKA, K.; KANEHISA, M. {The m-Distribution As the General
+  Formula of Intensity Distribution of Rapid Fading}.
+\emph{Memoirs of the Faculty of Engineering, Kobe University}, Kobe University,
+  v.~4, p. 78--125, 1957.}
+
+\bibitem[Papoulis e Pillai 2002]{papoulis2002probability}
+\abntrefinfo{Papoulis e Pillai}{PAPOULIS; PILLAI}{2002}
+{PAPOULIS, A.; PILLAI, S.U. \emph{{Probability, random variables and stochastic
+  processes}}. [S.l.]: McGraw-Hill Education (India) Pvt Ltd, 2002.}
+
+\bibitem[Raya, Papadimitratos e Hubaux 2006]{raya2006securing}
+\abntrefinfo{Raya, Papadimitratos e Hubaux}{RAYA; PAPADIMITRATOS; HUBAUX}{2006}
+{RAYA, M.; PAPADIMITRATOS, P.; HUBAUX, J.P. {Securing vehicular
+  communications}.
+\emph{IEEE Wireless Communications}, Citeseer, v.~13, n.~5, p.~8, 2006.}
+
+\bibitem[Taha e Hasan 2007]{taha2007vanet}
+\abntrefinfo{Taha e Hasan}{TAHA; HASAN}{2007}
+{TAHA, M.M.I.; HASAN, Y.M.Y. {VANET-DSRC Protocol for Reliable Broadcasting of
+  Life Safety Messages}. In:  \emph{Proc. of the IEEE International Symposium
+  on Signal Processing and Information Technology}. [S.l.: s.n.], 2007.}
+
+\end{thebibliography}

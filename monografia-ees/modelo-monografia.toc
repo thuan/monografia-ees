@@ -1,0 +1,11 @@
+\select@language {portuges}
+\contentsline {chapter}{\numberline {1}As redes veiculares}{11}
+\contentsline {section}{\numberline {1.1}O que s\IeC {\~a}o redes veiculares?}{11}
+\contentsline {section}{\numberline {1.2}Padr\IeC {\~o}es e Arquitetura DSRC/WAVE}{12}
+\contentsline {subsection}{\numberline {1.2.1}Caracter\IeC {\'\i }sticas do DSRC 5,9 GHz}{13}
+\contentsline {section}{\numberline {1.3}Caracter\IeC {\'\i }sticas das redes veiculares}{14}
+\contentsline {section}{\numberline {1.4}Aplica\IeC {\c c}\IeC {\~o}es potenciais}{15}
+\contentsline {section}{\numberline {1.5}Principais desafios}{16}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografia}{17}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }AP\^ENDICE}{18}
+\contentsline {chapter}{Ap\^endice{} A{} -$\tmspace -\thinmuskip {.1667em}$-{} Modelo de desvanecimento de \textit {Nakagami}}{19}
