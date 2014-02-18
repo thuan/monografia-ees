@@ -53,9 +53,9 @@ avisos de segurança, e acesso à internet, dentre outros \cite{li2007routing}.
 Grandes são os desafios para a efetiva utilização das VANETs em um cenário
 real. Por conta de suas características únicas como alta velocidade de
 movimentação e densidade altamente dinâmica, grande parte dos protocolos
-utilizados nas MANETs não são adequados \cite{taha2007vanet}. Além destes 
-desafios, outros de grande importância referem-se ao baixo tempo de conexão 
-entre veículos e a alta possibilidade de perda de conexão durante a 
+utilizados nas MANETs não são adequados \cite{taha2007vanet}. Além destes
+desafios, outros de grande importância referem-se ao baixo tempo de conexão
+entre veículos e a alta possibilidade de perda de conexão durante a
 transmissão de dados.
 
 As redes veiculares são promissoras, visto que permitem oferecer diversos
@@ -127,11 +127,11 @@ Mb/s. Em algumas circunstâncias, dois canais de serviço podem ser combinados
 para formar um canal único de 20 MHz, possibilitando atingir uma taxa de
 transferência de $54$ Mb/s. A única interferência na banda de $5,9$ GHz vem de
 radares militares e \textit{uplink} de satélites -- ambos esparsamente
-localizados --, ao passo que, a banda de 902--928 MHz é mais sucetível a 
-interferências, seja devido a telefones 900 MHz, dispositivos de identificação 
-automática instalados nas ferrovias (\textit{AEI readers}) e outros dispositivos 
-de observação meteorológica, como radares que detectam a velocidade e direção 
-dos ventos.  A tabela \ref{tab:dsrccomparison}, retirada de \cite{guo2006vehicular}, 
+localizados --, ao passo que, a banda de 902--928 MHz é mais sucetível a
+interferências, seja devido a telefones 900 MHz, dispositivos de identificação
+automática instalados nas ferrovias (\textit{AEI readers}) e outros dispositivos
+de observação meteorológica, como radares que detectam a velocidade e direção
+dos ventos.  A tabela \ref{tab:dsrccomparison}, retirada de \cite{guo2006vehicular},
 mostra as diferenças entre as tecnologias DSRC de primeira e segunda geração.
 
 \begin{table}[htbp]
@@ -153,7 +153,7 @@ mostra as diferenças entre as tecnologias DSRC de primeira e segunda geração.
  \label{tab:dsrccomparison}
 \end{table}
 
-Como dito anteriormente, o espectro DSRC é dividido em sete canais 
+Como dito anteriormente, o espectro DSRC é dividido em sete canais
 de $10$ MHz (Figura \ref{fig:dsrc}) e cada canal é utilizado por um
 tipo de aplicação.
 
@@ -174,11 +174,11 @@ aplicações de segurança ou por outros tipos de aplicação.
 \section{Características das redes veiculares}
 
 As redes veiculares apresentam características únicas que as tornam
-radicalmente diferentes \cite{blum2004challenges} de outras MANETs, e  
-tais características influenciam diretamente o desenvolvimento de 
-seus protocolos e serviços. Por conta disto, muitos dos protocolos 
-desenvolvidos para MANETs não funcionam adequadamente quando utilizados 
-em VANETs. 
+radicalmente diferentes \cite{blum2004challenges} de outras MANETs, e
+tais características influenciam diretamente o desenvolvimento de
+seus protocolos e serviços. Por conta disto, muitos dos protocolos
+desenvolvidos para MANETs não funcionam adequadamente quando utilizados
+em VANETs.
 
 Basicamente, uma VANET possui as seguintes características:
 \begin{enumerate}
@@ -188,18 +188,18 @@ Basicamente, uma VANET possui as seguintes características:
   \item[$\bullet$] mobilidade previsível.
 \end{enumerate}
 
-A combinação destas características resulta em uma topologia altamente 
-mutável que é frequentemente fragmentada e possui um pequeno diâmetro 
-efetivo da rede, também possui limitada redundância e diversos problemas 
+A combinação destas características resulta em uma topologia altamente
+mutável que é frequentemente fragmentada e possui um pequeno diâmetro
+efetivo da rede, também possui limitada redundância e diversos problemas
 de segurança \cite{raya2006securing, dotzer2006privacy, golle2004detecting}.
 
-Quanto maior a mobilidade dos veículos maior é a mudança da topologia, 
+Quanto maior a mobilidade dos veículos maior é a mudança da topologia,
 e essa mudança frequente resulta em curtos períodos de conectividade
-entre os nós, que podem mover-se a velocidades superiores a 200 km/h, 
-por exemplo. Uma possível solução para aumentar o tempo de conectividade 
-entre veículos seria aumentar a potência de transmissão, mas isso também 
-diminui o \textit{throughput} da rede \cite{khorashadi2007impact,chen2007impact}. 
-Por outro lado, como a trajetória dos veículos é restrigida pelo traçado 
+entre os nós, que podem mover-se a velocidades superiores a 200 km/h,
+por exemplo. Uma possível solução para aumentar o tempo de conectividade
+entre veículos seria aumentar a potência de transmissão, mas isso também
+diminui o \textit{throughput} da rede \cite{khorashadi2007impact,chen2007impact}.
+Por outro lado, como a trajetória dos veículos é restrigida pelo traçado
 da estrada, sua posição futura pode ser considerada previsível, e isto pode
 ser utilizado como métrica de um protocolo de roteamento fazendo com que
 sejam escolhidas rotas que possuam maior tempo de vida previsto.
@@ -208,11 +208,11 @@ A potência de transmissão dos OBUs geralmente não é uma restrição signific
 como ocorre em algumas redes de sensores sem fio. Um veículo consegue fornecer
 alimentação contínua para os dispositivos de comunicação.
 
-Outra característica interessante é a capacidade das redes veiculares 
-serem formadas por um número potencialmente grande de participantes -- 
-podendo se estender por toda uma estrada --, ao contrário da maioria 
-das redes \textit{ad hoc} estudadas na literatura, que normalmente assumem um 
-tamanho limitado da rede. 
+Outra característica interessante é a capacidade das redes veiculares
+serem formadas por um número potencialmente grande de participantes --
+podendo se estender por toda uma estrada --, ao contrário da maioria
+das redes \textit{ad hoc} estudadas na literatura, que normalmente assumem um
+tamanho limitado da rede.
 
 \section{Aplicações potenciais}
 As aplicações imaginadas para as redes veiculares variam desde aplicações que
@@ -223,11 +223,11 @@ diferentes.
 As ideias primárias das redes veiculares incluem aplicações de segurança para
 os motoristas e passageiros, provendo segurança e oferecendo ferramentas para a
 decisão do melhor caminho em uma estrada. Tais aplicações, portanto, pretendem
-minimizar os acidentes e melhorar as condições de tráfego, oferecendo informações 
+minimizar os acidentes e melhorar as condições de tráfego, oferecendo informações
 úteis aos motoristas e passageiros, como avisos de colisões, notificações
 sobre as condições da estrada e visões \textit{in-place} do tráfego
-\cite{moustafa2009vehicular}. Para que as aplicações de segurança possam ser 
-utilizadas, é necessário que os veículos compartilhem informações precisas de 
+\cite{moustafa2009vehicular}. Para que as aplicações de segurança possam ser
+utilizadas, é necessário que os veículos compartilhem informações precisas de
 posicionamento. As aplicações potenciais desta categoria são as seguintes:
 
 \begin{enumerate}
@@ -258,7 +258,7 @@ entretenimento. As aplicações potencias desta categoria são as seguintes:
  \item[$\bullet$] Aplicações de diagnóstico -- permitem que uma estação de
  serviço avalie o estado de um veículo sem fazer uma inspeção física.
 \end{enumerate}
- 
+
 \section{Principais desafios}
 As características inerentes às redes veiculares criam alguns desafios para a
 comunicação veicular, que podem dificultar uma futura utilização dessas redes no
