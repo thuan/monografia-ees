@@ -1,0 +1,118 @@
+% v0.4 - 2011071901
+%
+% Modelo de monografia em LaTeX da UECE baseado no template disponibilizado
+% por Rudy Matela em http://www.larces.uece.br/~rudy/pub/modelo_monografia/
+
+\input{modelo/tex/preambulo}
+
+
+% Informações gerais do documento
+\autor{Thuan Saraiva Nabuco}
+\autorr{Nabuco, Thuan Saraiva}
+\titulo{Desenvolvimento móvel multiplataforma: Uma análise comparativa entre PhoneGap e Titanium}
+\orientador{Paulo Henrique Mendes Maia}
+
+% essas informacoes do codigo CIP você consegue indo na biblioteca central
+\codigocip{C824p}{CDD:001.6}
+
+
+% Epígrafe: citação e autor (OPCIONAL)
+\epigrafe{``So many beautiful women and so little time.''}
+\autorepigrafe{John Barrymore}
+
+
+% Membros da comissão avaliadora
+\bancaum{Prof. Dr. \ABNTorientadordata\\
+Universidade Estadual do Ceará -- UECE\\Orientador}
+\bancadois{Prof. Dr. Gustavo Augusto de Lima Campos\\
+Universidade Estadual do Ceará -- UECE}
+\bancatres{Prof. Dr. Jorge Luiz de Castro e Silva\\
+Universidade Estadual do Ceará -- UECE}
+
+% data de aprovação
+\dataaprovacao{15/04/2010}
+
+% Agradecimentos
+\agradecimentostext{\noindent
+À minha família, pelo incentivo e apoio nos momentos difíceis.
+
+\noindent
+Aos amigos que conheci na UECE ao longo destes anos, pela ajuda e
+amizade.
+
+\noindent
+Ao professor Paulo Henrique Mendes Maia pela orientação e oportunidades de
+iniciação à pesquisa.
+
+\noindent
+À maioria dos professores que tive durante este curso de Especialização
+em Engenharia de Software com ênfase em padrões de software da UECE, por sua dedicação, comprometimento e compreensão.
+
+\noindent
+A todas as pessoas que passaram pela minha vida e contribuíram para a
+construção de quem sou hoje.
+
+}
+
+% Resumo/palavras chaves
+\resumotext{\sigla{VANETs}{Vehicular Ad hoc NETworks} (\textit{Vehicular Ad hoc
+NETworks}) são um tipo especial de rede móvel \textit{ad hoc}
+(\sigla{MANET}{\textit{Mobile ad hoc NETwork}}, \textit{Mobile ad hoc NETwork})
+formada por veículos entre si, e entre veículos e dispositivos que fazem parte
+da infraestrutura de ruas e rodovias. Apesar de compartilharem várias
+características com as MANETs tradicionais, as VANETs apresentam algumas
+diferenças significativas, como por exemplo o movimento do nós, aleatórios nas
+MANETs, mas relativamente ordenado nas VANETs, já que os veículos têm de
+obedecer as chamadas regras de trânsito. Neste trabalho, o protocolo de
+roteamento bioinspirado Ant-DYMO é simulado em um cenário veicular e tem seu
+desempenho comparado com o do protocolo DYMO. Além disso, é proposta uma
+modificação simples no mecanismo de criação de formigas do protocolo
+bioinspirado original, com o objetivo de verificar possíveis melhoras no
+desempenho geral do algoritmo, quando levando em consideração algumas das
+características próprias das redes veiculares, como a informação da vizinhança
+de veículos.}
+\pcs{VANET}{Roteamento}{ACO}{NS-2}{SUMO}
+
+% abstract/keywords
+\abstracttext{VANETs (Vehicular Ad hoc NETworks) are a special type of the
+Mobile Ad hoc NETworks (MANETs), made by vehicles communicating between
+themselves as well as by vehicles communicating with devices located at the
+margins of roads and highways. Despite sharing many characteristics with the
+traditional MANETs, VANETs present some significant differences. For instance,
+the nodes movement, completely random in MANETs, but relatively ordered in the
+VANETs, since the nodes -- the vehicles -- are supposed to obey a set of
+transit rules. In this work, the bio-inspired routing protocol Ant-DYMO is
+evaluated in a VANET scenario and has its performance compared with the DYMO
+protocol. Furthermore, a simple modification is proposed in the bio-inspired
+mechanisms of Ant-DYMO. The objective is to verify a possible improvement in
+the overall performance of the algorithm when taking into account some
+characteristics inherent to the vehicular networks, such as neighboring
+vehicle information.}
+\kws{VANET}{Routing}{ACO}{NS-2}{SUMO}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% inicio do documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+% o arquivo seguinte contém os elementos pre-textuais. edite-o caso deseje
+% adicionar/remover algum elemento.
+\input{modelo/tex/documento}
+
+% agora adicione os capítulos
+\input{chapters/introducao}
+\input{chapters/vanets}
+
+% bibliografia
+\bibliography{references}
+
+% caso haja apêndices, use ``\apendice'' antes de inserir
+% as secoes
+\apendice
+% adicione os apendices, caso existam
+\input{chapters/apendice-nakagami}
+
+\end{document}
+
