@@ -1,12 +1,12 @@
-\nomenclatureentry{aMANET@[{MANET}]\begingroup \textit{Mobile Ad hoc NETwork}\nomeqref {1.0}|nompageref}{12}
-\nomenclatureentry{aV2V@[{V2V}]\begingroup \textit{Vehicle-to-vechicle}\nomeqref {1.0}|nompageref}{12}
-\nomenclatureentry{aV2I@[{V2I}]\begingroup \textit{Vehicle-to-infrastructure}\nomeqref {1.0}|nompageref}{12}
-\nomenclatureentry{aOBU@[{OBU}]\begingroup \textit{On-board unit}\nomeqref {1.0}|nompageref}{12}
-\nomenclatureentry{aRSU@[{RSU}]\begingroup \textit{Road-side unit}\nomeqref {1.0}|nompageref}{12}
-\nomenclatureentry{aITS@[{ITS}]\begingroup \textit{Intelligent Transportation System}\nomeqref {1.0}|nompageref}{13}
-\nomenclatureentry{aC2C-CC@[{C2C-CC}]\begingroup \textit{Car-to-Car Communication Consortium}\nomeqref {1.0}|nompageref}{13}
-\nomenclatureentry{aWAVE@[{WAVE}]\begingroup \textit{Wireless Access in Vehicular Environments}\nomeqref {1.0}|nompageref}{13}
-\nomenclatureentry{aITS@[{ITS}]\begingroup \textit{Intelligent Transportation System}\nomeqref {1.0}|nompageref}{13}
-\nomenclatureentry{aWLANs@[{WLANs}]\begingroup \textit{Wireless Local Area Networks}\nomeqref {1.0}|nompageref}{17}
-\nomenclatureentry{aIEEE@[{IEEE}]\begingroup \textit{Institute of Electric and Electronic Engineers}\nomeqref {1.0}|nompageref}{17}
-\nomenclatureentry{aWiMAX@[{WiMAX}]\begingroup \textit{Worldwide Interoperability for Microwave Access}\nomeqref {1.0}|nompageref}{17}
+\nomenclatureentry{aMANET@[{MANET}]\begingroup \textit{Mobile Ad hoc NETwork}\nomeqref {3.0}|nompageref}{13}
+\nomenclatureentry{aV2V@[{V2V}]\begingroup \textit{Vehicle-to-vechicle}\nomeqref {3.0}|nompageref}{13}
+\nomenclatureentry{aV2I@[{V2I}]\begingroup \textit{Vehicle-to-infrastructure}\nomeqref {3.0}|nompageref}{13}
+\nomenclatureentry{aOBU@[{OBU}]\begingroup \textit{On-board unit}\nomeqref {3.0}|nompageref}{13}
+\nomenclatureentry{aRSU@[{RSU}]\begingroup \textit{Road-side unit}\nomeqref {3.0}|nompageref}{13}
+\nomenclatureentry{aITS@[{ITS}]\begingroup \textit{Intelligent Transportation System}\nomeqref {3.0}|nompageref}{14}
+\nomenclatureentry{aC2C-CC@[{C2C-CC}]\begingroup \textit{Car-to-Car Communication Consortium}\nomeqref {3.0}|nompageref}{14}
+\nomenclatureentry{aWAVE@[{WAVE}]\begingroup \textit{Wireless Access in Vehicular Environments}\nomeqref {3.0}|nompageref}{14}
+\nomenclatureentry{aITS@[{ITS}]\begingroup \textit{Intelligent Transportation System}\nomeqref {3.0}|nompageref}{14}
+\nomenclatureentry{aWLANs@[{WLANs}]\begingroup \textit{Wireless Local Area Networks}\nomeqref {3.0}|nompageref}{18}
+\nomenclatureentry{aIEEE@[{IEEE}]\begingroup \textit{Institute of Electric and Electronic Engineers}\nomeqref {3.0}|nompageref}{18}
+\nomenclatureentry{aWiMAX@[{WiMAX}]\begingroup \textit{Worldwide Interoperability for Microwave Access}\nomeqref {3.0}|nompageref}{18}
