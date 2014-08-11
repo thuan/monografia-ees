@@ -4,7 +4,7 @@
 \section{Contextualização} % (fold)
 \label{sec:contextualizacao}
 Devido a constante evolução das redes de comunicação e ao surgimento continuo de
-novas tecnologias, as tecnologias móveis tornaram-se cada vez mais importantes e
+novas tecnologias, as chamadas tecnologias móveis, tornaram-se cada vez mais
 presentes no cotidiano das pessoas, sendo utilizadas em pesquisas avançadas nos
 meios acadêmicos, corporativos, no entretenimento e no auxílio as atividades
 pessoais de cada usuário. Essas vertentes relacionadas a usabilidade
@@ -12,31 +12,32 @@ das tecnologias móveis surgiram principalmente pela evolução das redes
 móveis, algo que está sendo viabilizado principalmente pela crescente difusão,
 popularização e diversificação destas tecnologias.
 
-Um dispositivo móvel, designado popularmente em inglês por \textit{handheld}, é
-considerado um computador de bolso por possuir interfaces de entrada e saída
-de dados \textit{(input/output)}, uma tela \textit{(display)} e um teclado
-numérico sucessivamente. Entretanto os dispositivos móveis como
-\textit{palm-tops}, \textit{tablets} e \textit{smartphones}, designados
-popularmente em inglês pela sigla PDA\textit{(Personal Digital Assistent)},
-proporcionam uma solução integrada entre interface de entrada e de saída, a
-chamada interface \textit{touchscreen}.
+Primordialmente um dispositivo móvel, designado popularmente em inglês pelo termo
+\textit{handheld}, é considerado um computador de bolso por possuir interfaces
+de entrada e saída de dados \textit{(input/output)}, uma tela \textit{(display)}
+e um teclado numérico sucessivamente. Entretanto os dispositivos móveis
+desenvolvidos atualmente como os \textit{palm-tops}, \textit{tablets} e
+\textit{smartphones}, designados popularmente em inglês pela sigla PDA\textit{(
+Personal Digital Assistent)}, diferenciam-se por proporcionar uma solução
+integrada entre interface de entrada e de saída, a chamada interface
+\textit{touchscreen}.
 
-Os dispositivos móveis atualmente possuem soluções para múltiplas finalidades,
+Estes dispositivos móveis atualmente, possuem soluções para múltiplas finalidades,
 proporcionando ao usuário final comunicação através de serviços de voz e dados,
 desde serviços mais simples como envio de mensagens SMS\textit{(Short Message
 Service)} até a serviços mais complexos, como as webconferências, que exigem
 conectividade com a \textit{internet} e demandam um intenso fluxo de dados para
 disponibilização de serviços conhecidos como \textit{media streaming}.
 
-Considerando estas potencialidades de uso e à diversificação de soluções em uma
+Considerando essas potencialidades de uso e a diversificação de soluções em uma
 escala de disponibilidade crescente, os \textit{smartphones} e \textit{tablets}
-assumiram papel central nos últimos anos. Dados da Anatel indicam que o Brasil
-terminou o ano de 2012 com 242,2 milhões de dispositivos móveis conectáveis
-a uma densidade de 123,9 disp/100 hab. Estes números são muito expressivos,
-principalmente considerando a crescente demanda de acesso à informação pela
-internet móvel.
+assumiram papel central nos últimos anos. Pesquisas recentes informam que o
+número de usuários de internet móvel vem crescendo rapidamente, podendo superar
+o número de usuários de internet por computadores pessoais ainda no ano de 2014
+\cite{devitt2010meeker}. Estes números são muito expressivos, considerando a
+crescente demanda de acesso à informação pela internet móvel a nível mundial.
 % section contextualiza_o (end)
-\section{Motivação} % (fold)
+\section{Problemática} % (fold)
 \label{sec:motiva_o}
 
 Nos dias atuais, estamos vivenciando a chamada era da mobilidade, onde
@@ -80,25 +81,64 @@ utilizadas nessa área de pesquisa, bem como serão também expostas algumas nec
 podem contribuir para uma melhor convergência de soluções em softwares mobile, especialmente no que diz
 respeito ao desenvolvimento multiplataforma, traçando parâmetros e requisitos segundo as recomendações
 da W3C (World Wide Web Consortium).
-% section motiva_o (end)
 
-\section{Objetivos da Pesquisa} % (fold)
-\label{sec:objetivos}
 Para solucionar esse problema, nossos estudos foram realizados no
 chamado, desenvolvimento mobile multiplataforma, que utilizam frameworks que
 proporcionam uma experiência transparente ao usuário final utilizando-se de
 diferentes plataformas de desenvolvimento...
+
+% section motiva_o (end)
+
+\section{Objetivo da Pesquisa} % (fold)
+\label{sec:objetivos}
+Considerando o contexto atual, essa pesquisa propõe uma análise comparativa
+entre duas das principais ferramentas de desenvolvimento móvel multiplataforma
+existentes atualmente, o \textit{Apache Cordova}
+\textsuperscript{\texttrademark} e \textit{Appcelerator Titanium}
+\textsuperscript{\texttrademark}, com o objetivo de desenvolvermos uma solução
+móvel instável de acordo com os requisitos estabelecidos para uma aplicação
+multiplataforma. Estes requisitos são: código aberto \textit{(open source)},
+compatibilidade entre diferentes plataformas móveis, acesso aos recursos de
+\textit{hardware}, comunicação \textit{(server-side/back-end)}, interface de
+usuário \textit{(UI)} e segurança de dados.
+
 % section objetivos (end)
 
-\section{Metodologia de Pesquisa} % (fold)
+\section{Metodologia da Pesquisa} % (fold)
 \label{sec:metodologia_de_pesquisa}
-(Visão Geral dos capítulos)...
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+A metodologia que envolve a pesquisa foi subdividida em cinco capítulos. O
+desenvolvimento está organizado de acordo com os seguintes conceitos:
+\begin{itemize}
+  \item O primeiro capítulo apresenta os conceitos referentes
+    aos dispositivos móveis, os trabalhos relacionados e o objetivo da pesquisa.
+  \item O segundo capítulo apresenta a potencial diversificação no
+   desenvolvimento de tecnologias móveis e o conceito envolvendo a
+   denominação ecossistema móvel, a diversificação existente em cada subdivisão
+   e a sua influência no processo de engenharia e desenvolvimento de softwares
+   para dispositivos móveis.
+  \item No terceiro capítulo, será apresentado duas ferramentas para o
+   desenvolvimento móvel multiplataforma, o \textit{PhoneGap} e o
+   \textit{Titanium}. Apresentaremos as principais características de cada
+   ferramenta, sua estrutura arquitetural, experiência de usuário
+   \textit{(User Experience/UX)} e a interface de programação de aplicativos
+   \textit{(API)}.
+  \item No quarto capítulo, analisaremos critérios comparativos entre as
+   duas ferramentas de desenvolvimento móvel multiplataforma como, a
+   compatibilidade entre diferentes plataformas móveis, o acesso aos recursos de
+   hardware e ao desempenho de cada ferramenta. A análise referente ao
+   desempenho, será evidenciada de acordo com o desenvolvimento de uma
+   aplicação que acessará diferentes recursos de \textit{hardware} para coleta de
+   parâmetros referentes ao uso de memória, ao processamento de dados e ao
+   consumo de energia.
+  \item No quinto capítulo, será apresentada as considerações finais e as
+   pesquisas futuras referentes a escolha de uma das ferramentas apresentadas,
+   levando em consideração os parâmetros específicos de cada projeto de software.
+\end{itemize}
+
+É importante salientar que a pesquisa irá disponibilizar todo o código fonte
+desenvolvido para a criação da aplicação utilizada como parâmetro comparativo
+no quarto capítulo. O apêndice A contará com o código fonte utilizando o \textit{Apache Cordova} \textsuperscript{\texttrademark}, e o apêndice B com o código
+fonte usando o \textit{Appcelerator Titanium} \textsuperscript{\texttrademark}.
 % section metodologia_de_pesquisa (end)
 
 
